@@ -3,13 +3,13 @@ import Products from '../Products/Products.js'
 import './Home.css'
 
 const Home = () => {
-   const [products , setProducts] = useState([])
+    const [products, setProducts] = useState([])
 
-   useEffect(()=>{
-    fetch('http://localhost:4000/products')
-    .then(res => res.json())
-    .then(data =>setProducts(data))
-   },[])
+    useEffect(() => {
+        fetch('http://localhost:4000/products')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [])
 
     return (
         <div className="container">
@@ -21,7 +21,15 @@ const Home = () => {
             </div>
             <div className='row'>
                 {
-                    products.map(product =><Products product={product} key={product._id}></Products>)
+                    products.length === 0 &&
+
+                    <div className="spinner-border text-success" role="status">
+                        <span className="visually-hidden"></span>
+                    </div>
+
+                }
+                {
+                    products.map(product => <Products product={product} key={product._id}></Products>)
                 }
             </div>
 

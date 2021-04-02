@@ -1,25 +1,28 @@
-// import React, { useEffect, useState } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-// import './ProductDetails.css'
+import React from 'react';
 
-// const ProductDetails = () => {
-//     const [productDetail, setProductDetails] = useState([])
-//     useEffect(()=>{
-//         fetch('http://localhost:4000/products')
-//         .then(res => res.json())
-//         .then(data => setProductDetails(data))
-//     },[])
-//     return (
-//         <div className='details'>
+const Checkout = () => {
+    return (
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">weight</th>
+                        <th scope="col">price</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Onion</td>
+                        <td>200 gm</td>
+                        <td>$150</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    );
+};
 
-//             {
-//                 productDetail.map(details => {
-//                     <li>{details.name}</li>
-//                 })
-//             }
-//         </div>
-//     );
-// };
-
-// export default ProductDetails;
+export default Checkout;

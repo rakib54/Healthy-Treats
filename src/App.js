@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import Deals from './components/Deals/Deals';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Checkout from './components/Products/ProductDetails';
 
 export const UserContext = createContext()
 
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/deals">
               <Deals/>
+          </Route>
+          <Route path="/checkout">
+              <Checkout></Checkout>
           </Route>
           <Route path="/">
               <Home/>
