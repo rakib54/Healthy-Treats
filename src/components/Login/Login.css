@@ -1,0 +1,20 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.loginBtn {
+    text-align: center;
+    border-bottom: 1px solid grey;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%;
+    height:200px;
+}
+.loginBtn button {
+    width: 300px;
+    height: 40px;
+    background-position: center;
+    background-color: tomato;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}

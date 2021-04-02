@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.details ul {
+    position: relative;
+    width: 100%;
+    margin: 100px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.details ul li{
+    display: flex;
+    padding: 2px 5px;
+    margin: 5px 0;
+}

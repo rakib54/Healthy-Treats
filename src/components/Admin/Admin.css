@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: #042331;
+}
+.sidebar ul a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transform: .3s;
+}
+ul li:hover a {
+    font-size: 25px;
+}
+.details {
+    margin: 10px;
+}
+.addProduct input {
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 300px;
+    height: 30px;
+}
+.submit-btn {
+    border: none;
+    background-color: green;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+}

@@ -1,0 +1,12 @@
+.navbar{
+    margin: 5px;
+    padding: 5px;
+    margin-right: 50px;
+    justify-content:space-evenly;
+    
+}
+.nav-name{
+    margin-left: 50px;
+    color: tomato;
+}
+

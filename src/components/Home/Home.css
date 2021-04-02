@@ -1,0 +1,17 @@
+.search-btn{
+    text-align: center;
+    padding: 5px;
+    margin: 15px;
+}
+.search-btn button {
+    margin-right: 5px;
+    width: 100px;
+    height: 40px;
+}
+.search-btn input {
+    width: 200px;
+    height: 35px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
