@@ -91,8 +91,6 @@ const Admin = () => {
                 {
                     Toggle ?
                         <div className="col-md-7 justify-content-end ">
-
-                            {/* <ProductDetails></ProductDetails> */}
                             {
                                 productDetail.map(pd =>
                                     <div className=" d-flex justify-content-around details">
@@ -101,33 +99,11 @@ const Admin = () => {
                                         <li>{pd.weight}</li>
                                         <li>${pd.price}</li>
                                         <button onClick={() => handleDelete(pd._id)} className="btn btn-danger btn-sm">Delete</button>
-                                        {/* <table class="table">
-                                        <thead>
-                                            <tr>
-
-                                                <th className="text-center" scope="col">Name</th>
-                                                <th className="text-center"scope="col">weight</th>
-                                                <th className="text-center"scope="col">price</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                
-                                                <td className="text-center">{pd.name}</td>
-                                                <td className="text-center">{pd.weight}</td>
-                                                <td className="text-center">${pd.price}</td>
-                                            </tr>
-                                            
-                                                
-                                                
-                                        </tbody>
-                                    </table> */}
+                                        
                                     </div>)
                             }
 
                         </div>
-
-
                         :
                         <div className="col-md-7 addProduct">
                             <h3 style={{ color: 'green' }}>Add Your Product here</h3>
