@@ -70,36 +70,38 @@ const Admin = () => {
     }
 
     return (
-        <div className="container row justify-content-evenly">
-            <div className="col-md-5 sidebar">
-                <ul>
-                    <li>
-                        <Link to='admin/details' onClick={() => setToggle(true)}><FontAwesomeIcon icon={faQrcode} />Manage Product</Link>
+        <div className="container justify-content-evenly">
 
-                    </li>
-                    <li>
-                        <Link to='#'><FontAwesomeIcon icon={faPlus} />Add Product</Link>
+            <div className='row'>
+                <div className="col-md-5 sidebar">
+                    <ul>
+                        <li>
+                            <Link to='admin/details' onClick={() => setToggle(true)}><FontAwesomeIcon icon={faQrcode} />Manage Product</Link>
 
-                    </li>
-                    <li>
-                        <Link ><FontAwesomeIcon icon={faEdit} />Edit Product</Link>
-                    </li>
-                </ul>
-            </div>
-            {
-                Toggle ?
-                    <div className="col-md-7 ">
+                        </li>
+                        <li>
+                            <Link to='#'><FontAwesomeIcon icon={faPlus} />Add Product</Link>
 
-                        {/* <ProductDetails></ProductDetails> */}
-                        {
-                            productDetail.map(pd =>
-                                <div className=" d-flex justify-content-around details">
-                                    <h5>{pd.name}</h5>
-                                
-                                <li>{pd.weight}</li>
-                                <li>${pd.price}</li>
-                                <button onClick={()=>handleDelete(pd._id)} className="btn btn-danger btn-sm">Delete</button>
-                                    {/* <table class="table">
+                        </li>
+                        <li>
+                            <Link ><FontAwesomeIcon icon={faEdit} />Edit Product</Link>
+                        </li>
+                    </ul>
+                </div>
+                {
+                    Toggle ?
+                        <div className="col-md-7 justify-content-end ">
+
+                            {/* <ProductDetails></ProductDetails> */}
+                            {
+                                productDetail.map(pd =>
+                                    <div className=" d-flex justify-content-around details">
+                                        <h5>{pd.name}</h5>
+
+                                        <li>{pd.weight}</li>
+                                        <li>${pd.price}</li>
+                                        <button onClick={() => handleDelete(pd._id)} className="btn btn-danger btn-sm">Delete</button>
+                                        {/* <table class="table">
                                         <thead>
                                             <tr>
 
@@ -120,29 +122,31 @@ const Admin = () => {
                                                 
                                         </tbody>
                                     </table> */}
-                                </div>)
-                        }
+                                    </div>)
+                            }
 
-                    </div>
+                        </div>
 
 
-                    :
-                    <div className="col-md-7 addProduct">
-                        <h3 style={{color:'green'}}>Add Your Product here</h3>
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <label htmlFor=""><b>Product Name</b></label><br />
-                            <input name="name" placeholder="new product" ref={register} /><br />
-                            <label htmlFor=""><b>Weight</b></label><br />
-                            <input name="weight" placeholder="weight" ref={register} /><br />
-                            <label htmlFor=""><b>price</b></label><br />
-                            <input name="price" placeholder="Enter a price" ref={register} /><br />
-                            <label htmlFor=""><b>Upload image</b></label><br />
-                            <input type="file" onChange={handleImageUpload} />
+                        :
+                        <div className="col-md-7 addProduct">
+                            <h3 style={{ color: 'green' }}>Add Your Product here</h3>
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <label htmlFor=""><b>Product Name</b></label><br />
+                                <input name="name" placeholder="new product" ref={register} /><br />
+                                <label htmlFor=""><b>Weight</b></label><br />
+                                <input name="weight" placeholder="weight" ref={register} /><br />
+                                <label htmlFor=""><b>price</b></label><br />
+                                <input name="price" placeholder="Enter a price" ref={register} /><br />
+                                <label htmlFor=""><b>Upload image</b></label><br />
+                                <input type="file" onChange={handleImageUpload} />
 
-                            <input type="submit" className="submit-btn" />
-                        </form>
-                    </div>
-            }
+                                <input type="submit" className="submit-btn" />
+                            </form>
+                        </div>
+                }
+            </div>
+
         </div>
     );
 };
