@@ -23,7 +23,7 @@ const Admin = () => {
             price: data.price,
             imageURL: imageURL
         }
-        const url = `http://localhost:4000/addProduct`
+        const url = `https://pacific-beach-82940.herokuapp.com/addProduct`
 
         fetch(url, {
             method: 'POST',
@@ -37,7 +37,7 @@ const Admin = () => {
             })
     }
     useEffect(() => {
-        fetch('http://localhost:4000/products')
+        fetch('https://pacific-beach-82940.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProductDetails(data))
 
@@ -60,7 +60,7 @@ const Admin = () => {
             });
     }
     const handleDelete = id => {
-        fetch(`http://localhost:4000/deleteProduct/${id}`, {
+        fetch(`https://pacific-beach-82940.herokuapp.com/deleteProduct/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

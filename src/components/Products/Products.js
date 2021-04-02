@@ -16,7 +16,7 @@ const Products = ({product}) => {
         
         const newProduct = {...loggedInUser,...Time}
         
-        fetch('http://localhost:4000/buyProduct',{
+        fetch('https://pacific-beach-82940.herokuapp.com/buyProduct',{
             method:'POST',
             headers :{
                 'Content-Type' :'application/json'
