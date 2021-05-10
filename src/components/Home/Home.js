@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../Footer/Footer.js';
 import Products from '../Products/Products.js'
 import './Home.css'
 
@@ -12,14 +13,15 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="container">
+        <main>
+            <div className="container">
             <div className="search-btn">
-                <form action="" >
-                    <input type="search" name="search" placeholder="search" id="" />
-                    <button class="btn btn-success btn-sm" type="submit">Search</button>
+                <form action="">
+                    <input className="text-center" type="search" name="search" placeholder="search" id="" />
+                    <button class="btn btn-success btn-sm ms-5" type="submit">Search</button>
                 </form>
             </div>
-            <div className='row'>
+            <div>
                 {
                     products.length === 0 &&
 
@@ -28,12 +30,16 @@ const Home = () => {
                     </div>
 
                 }
-                {
-                    products.map(product => <Products product={product} key={product._id}></Products>)
-                }
+                <div className="row mt-5">
+                    {
+                        products.map(product => <Products product={product} key={product._id}></Products>)
+                    }
+                </div>
             </div>
-
+            
         </div>
+        <Footer></Footer>
+        </main>
     );
 };
 

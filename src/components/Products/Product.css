@@ -1,0 +1,23 @@
+.products{
+    margin-top: 8%;
+}
+.inner{
+    overflow: hidden;
+}
+.inner img{
+    transition: all 2.5s ease;
+}
+.inner:hover img{
+    transform: scale(1.5);
+}
+.products a{
+    color: white;
+    background: rgb(209, 19, 57);
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+}
+.card{
+    box-shadow: 1px 1px 10px rgb(204, 203, 203);
+    border: none; 
+}

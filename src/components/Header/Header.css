@@ -1,12 +1,8 @@
-.navbar{
-    margin: 5px;
-    padding: 5px;
-    margin-right: 50px;
-    justify-content:space-evenly;
-    
-}
-.nav-name{
+.nav-name b{
+    margin-top: 5px;
+    font-size: 25px;
     margin-left: 50px;
-    color: tomato;
+    color: rgb(218, 56, 28);
 }
+
 

@@ -1,0 +1,14 @@
+.addProduct{
+    margin: 20px 50px;
+}
+.addProduct input{
+    display: block;
+    margin-top: 10px;
+    padding: 2px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 250px;
+}
+.error{
+    color: red;
+}

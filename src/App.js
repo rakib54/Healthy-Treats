@@ -8,12 +8,15 @@ import {
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Orders from './components/Orders/Orders';
-import Admin from './components/Admin/Admin';
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import Deals from './components/Deals/Deals';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Checkout from './components/Products/ProductDetails';
+import Sidebar from './components/Sidebar/Sidebar';
+import AddProduct from './components/AddProduct/AddProduct';
+import AllProducts from './components/AllProducts/AllProducts';
+import Dashboard from './components/Dashboard/Dashboard';
 
 export const UserContext = createContext()
 
@@ -31,13 +34,22 @@ function App() {
              <Orders/>
           </PrivateRoute>
           <PrivateRoute path="/admin">
-             <Admin/>
+             <Sidebar></Sidebar>
           </PrivateRoute>
+          <Route path="/addProduct">
+            <AddProduct></AddProduct>
+          </Route>
           <Route path="/login">
              <Login/>
           </Route>
           <Route path="/deals">
               <Deals/>
+          </Route>
+          <Route path="/allProducts">
+              <AllProducts></AllProducts>
+          </Route>
+          <Route path="/dashboard">
+              <Dashboard></Dashboard>
           </Route>
           <Route path="/checkout">
               <Checkout></Checkout>
